@@ -1,0 +1,15 @@
+<ng-transclude hidden></ng-transclude>
+<table>
+    <thead>
+    <tr>
+        <th ng-repeat="column in $ctrl.columns">{{column.header}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="items in $ctrl.items">
+        <td ng-repeat="column in $ctrl.columns">{{column.content}}</td>
+        <!--<my-column ng-repeat="column in $ctrl.columns"></my-column>-->
+        <!--<ng-transclude></ng-transclude>-->
+    </tr>
+    </tbody>
+</table>

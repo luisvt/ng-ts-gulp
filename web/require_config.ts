@@ -1,3 +1,5 @@
+declare var require;
+
 require.config({
     //By default load any module IDs from js/lib
     baseUrl: '',
@@ -11,7 +13,7 @@ require.config({
         'ts-helpers': 'ts-helpers/index'
     }
 });
-require(['module.config', 'angular'], function (moduleConfig) {
+
+require(['module.config', 'angular'], function(moduleConfig) {
     angular.bootstrap(document, [moduleConfig.heroApp.name]);
 });
-//# sourceMappingURL=require_config.js.map

@@ -5,9 +5,24 @@
     <title>Example - example-heroComponentTree-production</title>
 
     <script data-main="require_config" src="requirejs/require.js"></script>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
 
 </head>
 <body>
 <hero-list></hero-list>
+
+<my-tabs>
+    <my-pane header="Hello">
+        <h4>Hello</h4>
+        <p>Lorem ipsum dolor sit amet</p>
+    </my-pane>
+    <my-pane header="World">
+        <h4>World</h4>
+        <em>Mauris elementum elementum enim at suscipit.</em>
+        <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
+    </my-pane>
+</my-tabs>
+
+<hero-table></hero-table>
 </body>
 </html>

@@ -1,13 +1,20 @@
-import {heroApp} from "../mdoule.config";
+import {Component} from 'ngts-annotations/src/at-angular';
 
-class EditableFieldController{
+@Component({
+    name: 'editableField',
+    templateUrl: 'components/editable-field.component.html',
+    bindings: {
+        fieldValue: '<',
+        fieldType: '@?',
+        onUpdate: '&'
+    }
+})
+export class EditableFieldComponent{
     fieldValueCopy;
     fieldValue;
     fieldType;
     editMode = false;
     onUpdate;
-
-    constructor() {}
 
     handleModeChange() {
         if (this.editMode) {
@@ -31,13 +38,3 @@ class EditableFieldController{
         }
     }
 }
-
-heroApp.component('editableField', {
-    templateUrl: 'src/components/editable-field.component.html',
-    controller: EditableFieldController,
-    bindings: {
-        fieldValue: '<',
-        fieldType: '@?',
-        onUpdate: '&'
-    }
-});
